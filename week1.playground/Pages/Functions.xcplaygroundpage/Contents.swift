@@ -22,11 +22,11 @@ hello("Spark Student")
 //: ### Multiple Parameters
 //: Each parameter requires a name and a type
 
-func greet(greeting: String, name: String) {
+func greet(greeting greeting: String, name: String) {
     print("\(greeting), \(name)")
 }
 
-greet("Bonjour", name: "Spark Student")
+greet(greeting: "Bonjour", name: "Spark Student")
 
 //: ### Default Values
 //: You can provide default values for parameters.

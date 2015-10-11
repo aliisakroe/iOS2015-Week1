@@ -1,13 +1,26 @@
 //: # Variables
 //: [TOC](Table%20of%20Contents) | Previous | [Next](@next)
-
+func double(number: Int) -> Int {
+    return number * 2
+}
+func triple(number: Int) -> Int {
+    return number * 3
+}
+func modifyInt(number:Int, modifier: Int -> Int) -> Int {
+    return modifier(number)
+}
+modifyInt(6, modifier: double)
+modifyInt(6, modifier: triple)
 //: ## Constants
 //: Constants are variables whose values _cannot_ be changed. They are defined using the **let** keyword.
 
-let person = "Spark Student"
 
+let person = "Spark Student"
+let greeting = "hello"
 //: The 'person' variable cannot be changed, so the following line would fail
 //person = "Someone else"
+//greeting = 'yo'
+
 
 //: ## Inferred Type
 //: Swift will infer the type of a variable, whenever possible
@@ -84,6 +97,8 @@ if let validString = testString {
 } else {
     print("test string was nil")
 }
+
+
 
 //: You can also perform normal **if** style checks using the **where** keyword
 testString = ""
